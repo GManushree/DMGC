@@ -5,7 +5,7 @@ import pandas as pd
 def load_model(file_path='heart_condition_model.pkl'):
     with open(file_path, 'rb') as f:
         model, label_encoder = pickle.load(f)
-    return model, label_encoder
+    return model, label_encoder    
 
 def predict_heart_condition(heart_rate, model, label_encoder):
     heart_rate_df = pd.DataFrame({'HeartRate': [heart_rate]})
